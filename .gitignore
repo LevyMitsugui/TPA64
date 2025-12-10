@@ -1,0 +1,12 @@
+# dev
+usb-tpa64-csharp/
+temp/
+*.temp
+*.png
+
+# Python cache
+__pycache__/
+*.pyc
+
+# logs
+*.log
