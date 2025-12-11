@@ -1,17 +1,43 @@
 [build-system]
-requires = ["setuptools>=61"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [project]
 name = "tpa64"
 version = "0.1.0"
-dependencies = ["pyserial", "Pillow"]
-description = "USB-TPA64 thermal camera interface"
+description = "Python driver for the USB-TPA64 8x8 thermal camera"
 readme = "README.md"
-requires-python = ">=3.8"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
 
-[tool.setuptools]
-package-dir = {"" = "src"}
+authors = [
+  { name = "LevyMitsugui"}
+]
 
-[tool.setuptools.packages.find]
-where = ["src"]
+dependencies = [
+  "pyserial",
+  "Pillow",
+]
+
+keywords = ["thermal", "camera", "usb-tpa64"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",        # or whatever your LICENSE is
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/LevyMitsugui/TPA64"
+Repository = "https://github.com/LevyMitsugui/TPA64"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/tpa64"]
+
+[tool.hatch.build.targets.sdist]
+include = [
+  "src",
+  "examples",
+  "README.md",
+  "LICENSE",
+]
