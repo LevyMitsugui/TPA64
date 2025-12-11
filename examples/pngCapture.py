@@ -1,7 +1,7 @@
 from tpa64 import USBTPA64, Frame
 
 
-with USBTPA64("COM8") as cam:
+with USBTPA64("/dev/ttyACM0") as cam:
     module_id, fw = cam.get_info()
     print("Module:", module_id, "FW:", fw)
     print("Serial:", cam.get_serial())
