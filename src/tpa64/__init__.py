@@ -1,3 +1,3 @@
-from .tpa64 import USBTPA64, Frame  # and anything else you want public
+from .tpa64 import USBTPA64, Frame
 
 __all__ = ["USBTPA64", "Frame"]
