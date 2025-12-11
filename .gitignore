@@ -3,9 +3,14 @@ usb-tpa64-csharp/
 temp/
 *.temp
 *.png
+*.egg-info/
+*.egg-info
+*.egg
 
 # virtual environment
 venv/
+.env/
+.venv/
 
 # python cache
 __pycache__/
