@@ -11,10 +11,9 @@ Protocol details implemented in this library follow the official device document
 ### Requirements
 
 This library depends on:
-```bash
-pyserial
-pillow
-```
+
+```pyserial```
+```pillow```
 
 Install them manually if needed:
 ```bash
@@ -23,9 +22,9 @@ pip install pyserial pillow
 ### Install the package (development mode)
 
 Inside the project root:
-
+```bash
 pip install -e .
-
+```
 This installs the ```tpa64``` package and allows modifying the source without reinstalling.
 
 ---
